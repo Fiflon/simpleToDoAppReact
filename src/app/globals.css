@@ -1,0 +1,37 @@
+#container {
+  background-color: #c0c5c1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  max-width: 60vw;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #c0c5c1;
+  border-radius: 5px;
+}
+
+.todoItemContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: #574b60;
+  margin-top: 1rem;
+  align-items: center;
+  color: #c0c5c1;
+}
+
+.tasksListContainer {
+  background-color: #7d8491;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: decimal;
+  padding: 0%;
+  width: 40vw;
+  border: 2px solid #7d8491;
+  border-radius: 5px;
+}
+
+html {
+  background-color: #eaf0ce;
+}

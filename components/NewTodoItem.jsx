@@ -6,14 +6,14 @@ export default function NewTodoItem({
   deleteTodo,
 }) {
   return (
-    <li>
+    <li className="todoItemContainer">
       <input
         type="checkbox"
         checked={statusOfTask}
         onChange={(e) => toggleTask(id, e.target.checked)}
       ></input>
-      {statusOfTask === true ? (
-        <p style={{ textDecoration: "line-through" }}>{nameOfTheTask}</p>
+      {statusOfTask ? (
+        <p className="doneTask">{nameOfTheTask}</p>
       ) : (
         <p>{nameOfTheTask}</p>
       )}

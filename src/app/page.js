@@ -39,10 +39,10 @@ export default function Home() {
 
   return (
     <>
-      <div>
+      <div id="container">
         <h1>TodoApp</h1>
 
-        <NewForm onSubmit={addNewTask} />
+        <NewForm onSubmit={addNewTask} className="inputFormContainer" />
         <NewTodoList
           listOfTasks={listOfTasks}
           toggleTask={toggleTask}

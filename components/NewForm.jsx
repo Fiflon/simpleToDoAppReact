@@ -18,8 +18,15 @@ export default function NewForm({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" onChange={onChangeHandler} value={taskNewName}></input>
-      <button onClick={handleSubmit}>add task</button>
+      <input
+        type="text"
+        onChange={onChangeHandler}
+        value={taskNewName}
+        className="inputTask"
+      ></input>
+      <button onClick={handleSubmit} className="taskAdder">
+        add task
+      </button>
     </form>
   );
 }
