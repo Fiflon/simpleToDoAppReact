@@ -1,14 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+  font-family: "Roboto";
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
 #container {
   background-color: #c0c5c1;
+  color: #7d8491;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: auto;
   max-width: 60vw;
+  min-height: none;
   margin: auto;
+  margin-top: 1rem;
   padding: 20px;
   border: 2px solid #c0c5c1;
   border-radius: 5px;
+  box-shadow: 0.3rem 0.3rem 1rem 0.3rem #7d8491;
 }
 
 .todoItemContainer {
@@ -34,4 +51,60 @@
 
 html {
   background-color: #eaf0ce;
+}
+
+#container > form {
+  width: 30vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 100px;
+}
+
+.inputTask {
+  border: none;
+  background-color: #eaf0ce;
+  border-bottom: 0.125rem solid #7d8491;
+  border-radius: 5px;
+  width: 100%;
+  height: 5rem;
+  font-size: 2rem;
+  padding-left: 0.875rem;
+  line-height: 147.6%;
+  padding-top: 0.825rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0rem 0rem 1rem 0.3rem #7d8491;
+}
+
+.inputTask:focus {
+  border: 0.125rem solid #7d8491;
+  outline: none;
+}
+
+form > button {
+  margin-top: 1rem;
+  background-color: #eaf0ce;
+  height: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  font-size: larger;
+}
+
+.buttonUsg {
+  background-color: #eaf0ce;
+  border: none;
+  color: #7d8491;
+
+  border-bottom: 2px solid #7d8491;
+}
+.buttonUsg:hover {
+  color: #574b60;
+}
+
+.buttonUsg:active {
+  border: 0.125rem solid #7d8491;
+}
+
+.width100 {
+  width: 100%;
 }

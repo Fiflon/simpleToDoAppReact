@@ -24,7 +24,7 @@ export default function NewForm({ onSubmit }) {
         value={taskNewName}
         className="inputTask"
       ></input>
-      <button onClick={handleSubmit} className="taskAdder">
+      <button onClick={handleSubmit} className="buttonUsg width100">
         add task
       </button>
     </form>
