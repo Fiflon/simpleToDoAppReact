@@ -22,6 +22,7 @@ export default function NewForm({ onSubmit }) {
         type="text"
         onChange={onChangeHandler}
         value={taskNewName}
+        placeholder="Add title..."
         className="inputTask"
       ></input>
       <button onClick={handleSubmit} className="buttonUsg width100">

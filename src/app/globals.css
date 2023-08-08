@@ -33,8 +33,25 @@ h1 {
   flex-direction: row;
   background-color: #574b60;
   margin-top: 1rem;
+  justify-content: space-between;
   align-items: center;
   color: #c0c5c1;
+  height: 5vh;
+  min-width: 16vw;
+  max-width: 50vw;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0.3rem 0.3rem 1rem 0.06rem #64686f;
+}
+
+.todoItemContainer > button {
+  margin-right: 0.3rem;
+  margin-left: 0.5rem;
+}
+
+.doneTask {
+  text-decoration: line-through;
+  color: #939593;
 }
 
 .tasksListContainer {
@@ -44,9 +61,13 @@ h1 {
   align-items: center;
   list-style-type: decimal;
   padding: 0%;
-  width: 40vw;
+  min-width: 30vw;
   border: 2px solid #7d8491;
   border-radius: 5px;
+  max-width: 55vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vw;
 }
 
 html {
@@ -79,6 +100,17 @@ html {
   border: 0.125rem solid #7d8491;
   outline: none;
 }
+.taskModule {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.3rem;
+  max-width: 53rem;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+.taskModule > p {
+  margin-left: 0.4rem;
+}
 
 form > button {
   margin-top: 1rem;
@@ -86,17 +118,18 @@ form > button {
   height: 1.5rem;
   padding-bottom: 1rem;
   text-align: center;
-  border-radius: 5px;
   font-size: larger;
 }
 
 .buttonUsg {
   background-color: #eaf0ce;
+  border-radius: 5px;
   border: none;
   color: #7d8491;
 
   border-bottom: 2px solid #7d8491;
 }
+
 .buttonUsg:hover {
   color: #574b60;
 }
