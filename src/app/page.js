@@ -1,10 +1,20 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NewForm from "../../components/NewForm";
 import NewTodoList from "../../components/NewTodoList";
 
 export default function Home() {
-  const [listOfTasks, setListOfTasks] = useState([]);
+  const [listOfTasks, setListOfTasks] = useState(() => {
+    const localTasks = localStorage.getItem("TASKS");
+    if (localTasks == null) {
+      return [];
+    }
+    return JSON.parse(localTasks);
+  });
+
+  useEffect(() => {
+    localStorage.setItem("TASKS", JSON.stringify(listOfTasks), [listOfTasks]);
+  });
 
   function addNewTask(taskNewName) {
     setListOfTasks((currentListOfTasks) => {
