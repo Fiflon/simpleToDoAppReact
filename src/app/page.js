@@ -1,4 +1,5 @@
 "use client";
+import addNewTask from "@/utils/addNewTask";
 import deleteTask from "@/utils/deleteTask";
 import toggleTask from "@/utils/toggleTask";
 import { useEffect, useState } from "react";
@@ -18,7 +19,7 @@ export default function Home() {
     localStorage.setItem("TASKS", JSON.stringify(listOfTasks), [listOfTasks]);
   });
 
-  function addNewTask(taskNewName) {
+  /*   function addNewTask(taskNewName) {
     setListOfTasks((currentListOfTasks) => {
       return [
         ...currentListOfTasks,
@@ -29,24 +30,6 @@ export default function Home() {
         },
       ];
     });
-  }
-
-  /*   function toggleTask(id, statusOfTask) {
-    setListOfTasks((currentListOfTasks) => {
-      return currentListOfTasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, statusOfTask };
-        }
-
-        return task;
-      });
-    });
-  }
- */
-  /*   function deleteTodo(id) {
-    setListOfTasks((currentTodos) => {
-      return currentTodos.filter((todo) => todo.id !== id);
-    });
   } */
 
   return (
@@ -54,7 +37,11 @@ export default function Home() {
       <div id="container">
         <h1>TodoApp</h1>
 
-        <NewForm onSubmit={addNewTask} className="inputFormContainer" />
+        <NewForm
+          onSubmit={addNewTask}
+          setListOfObjects={setListOfTasks}
+          className="inputFormContainer"
+        />
         <NewTodoList
           listOfTasks={listOfTasks}
           setListOfTasks={setListOfTasks}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function NewForm({ onSubmit }) {
+export default function NewForm({ onSubmit, setListOfObjects }) {
   const [taskNewName, setTaskNewName] = useState("");
 
   const onChangeHandler = (e) => {
@@ -12,7 +12,7 @@ export default function NewForm({ onSubmit }) {
     if (taskNewName === "") {
       return;
     }
-    onSubmit(taskNewName);
+    onSubmit(taskNewName, setListOfObjects);
     setTaskNewName("");
   }
 

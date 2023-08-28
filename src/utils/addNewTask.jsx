@@ -1,11 +1,12 @@
-export default function addNewTask(taskNewName, { currentListOfTasks }) {
-  const newTask = {
-    id: crypto.randomUUID(),
-    nameOfTheTask: taskNewName,
-    statusOfTask: false,
-  };
-
+export default function addNewTask(taskNewName, setListOfTasks) {
   setListOfTasks((currentListOfTasks) => {
-    return [...currentListOfTasks, newTask];
+    return [
+      ...currentListOfTasks,
+      {
+        id: crypto.randomUUID(),
+        nameOfTheTask: taskNewName,
+        statusOfTask: false,
+      },
+    ];
   });
 }
