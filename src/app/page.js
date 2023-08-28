@@ -19,19 +19,6 @@ export default function Home() {
     localStorage.setItem("TASKS", JSON.stringify(listOfTasks), [listOfTasks]);
   });
 
-  /*   function addNewTask(taskNewName) {
-    setListOfTasks((currentListOfTasks) => {
-      return [
-        ...currentListOfTasks,
-        {
-          id: crypto.randomUUID(),
-          nameOfTheTask: taskNewName,
-          statusOfTask: false,
-        },
-      ];
-    });
-  } */
-
   return (
     <>
       <div id="container">
