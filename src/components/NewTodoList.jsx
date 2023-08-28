@@ -1,6 +1,11 @@
 import NewTodoItem from "./NewTodoItem";
 
-export default function NewTodoList({ listOfTasks, toggleTask, deleteTodo }) {
+export default function NewTodoList({
+  listOfTasks,
+  setListOfTasks,
+  toggleTask,
+  deleteTodo,
+}) {
   let length = listOfTasks.length;
   return (
     <>
@@ -14,6 +19,7 @@ export default function NewTodoList({ listOfTasks, toggleTask, deleteTodo }) {
               key={task.id}
               toggleTask={toggleTask}
               deleteTodo={deleteTodo}
+              setListOfTasks={setListOfTasks}
             />
           ))}
         </ul>

@@ -1,27 +1,33 @@
+import Button from "./Button";
+import Checkbox from "./Checkbox";
+
 export default function NewTodoItem({
   id,
   statusOfTask,
   nameOfTheTask,
   toggleTask,
   deleteTodo,
+  setListOfTasks,
 }) {
   return (
     <li className="todoItemContainer">
       <div className="taskModule">
-        <input
-          type="checkbox"
+        <Checkbox
           checked={statusOfTask}
           onChange={(e) => toggleTask(id, e.target.checked)}
-        ></input>
+        ></Checkbox>
         {statusOfTask ? (
           <p className="doneTask">{nameOfTheTask}</p>
         ) : (
           <p>{nameOfTheTask}</p>
         )}
       </div>
-      <button className="buttonUsg" onClick={() => deleteTodo(id)}>
+      <Button
+        className="buttonUsg"
+        onClick={() => deleteTodo(id, setListOfTasks)}
+      >
         delete
-      </button>
+      </Button>
     </li>
   );
 }

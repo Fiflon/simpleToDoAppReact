@@ -1,7 +1,8 @@
 "use client";
+import deleteTodo from "@/utils/deleteTask";
 import { useEffect, useState } from "react";
-import NewForm from "../../components/NewForm";
-import NewTodoList from "../../components/NewTodoList";
+import NewForm from "../components/NewForm";
+import NewTodoList from "../components/NewTodoList";
 
 export default function Home() {
   const [listOfTasks, setListOfTasks] = useState(() => {
@@ -41,11 +42,11 @@ export default function Home() {
     });
   }
 
-  function deleteTodo(id) {
+  /*   function deleteTodo(id) {
     setListOfTasks((currentTodos) => {
       return currentTodos.filter((todo) => todo.id !== id);
     });
-  }
+  } */
 
   return (
     <>
@@ -55,6 +56,7 @@ export default function Home() {
         <NewForm onSubmit={addNewTask} className="inputFormContainer" />
         <NewTodoList
           listOfTasks={listOfTasks}
+          setListOfTasks={setListOfTasks}
           toggleTask={toggleTask}
           deleteTodo={deleteTodo}
         />
