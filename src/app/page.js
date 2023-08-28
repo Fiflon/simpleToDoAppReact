@@ -1,5 +1,6 @@
 "use client";
-import deleteTodo from "@/utils/deleteTask";
+import deleteTask from "@/utils/deleteTask";
+import toggleTask from "@/utils/toggleTask";
 import { useEffect, useState } from "react";
 import NewForm from "../components/NewForm";
 import NewTodoList from "../components/NewTodoList";
@@ -30,7 +31,7 @@ export default function Home() {
     });
   }
 
-  function toggleTask(id, statusOfTask) {
+  /*   function toggleTask(id, statusOfTask) {
     setListOfTasks((currentListOfTasks) => {
       return currentListOfTasks.map((task) => {
         if (task.id === id) {
@@ -41,7 +42,7 @@ export default function Home() {
       });
     });
   }
-
+ */
   /*   function deleteTodo(id) {
     setListOfTasks((currentTodos) => {
       return currentTodos.filter((todo) => todo.id !== id);
@@ -58,7 +59,7 @@ export default function Home() {
           listOfTasks={listOfTasks}
           setListOfTasks={setListOfTasks}
           toggleTask={toggleTask}
-          deleteTodo={deleteTodo}
+          deleteTask={deleteTask}
         />
       </div>
     </>

@@ -4,7 +4,7 @@ export default function NewTodoList({
   listOfTasks,
   setListOfTasks,
   toggleTask,
-  deleteTodo,
+  deleteTask,
 }) {
   let length = listOfTasks.length;
   return (
@@ -18,7 +18,7 @@ export default function NewTodoList({
               statusOfTask={task.statusOfTask}
               key={task.id}
               toggleTask={toggleTask}
-              deleteTodo={deleteTodo}
+              deleteTask={deleteTask}
               setListOfTasks={setListOfTasks}
             />
           ))}

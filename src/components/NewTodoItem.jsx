@@ -6,7 +6,7 @@ export default function NewTodoItem({
   statusOfTask,
   nameOfTheTask,
   toggleTask,
-  deleteTodo,
+  deleteTask,
   setListOfTasks,
 }) {
   return (
@@ -14,7 +14,7 @@ export default function NewTodoItem({
       <div className="taskModule">
         <Checkbox
           checked={statusOfTask}
-          onChange={(e) => toggleTask(id, e.target.checked)}
+          onChange={(e) => toggleTask(id, e.target.checked, setListOfTasks)}
         ></Checkbox>
         {statusOfTask ? (
           <p className="doneTask">{nameOfTheTask}</p>
@@ -24,7 +24,7 @@ export default function NewTodoItem({
       </div>
       <Button
         className="buttonUsg"
-        onClick={() => deleteTodo(id, setListOfTasks)}
+        onClick={() => deleteTask(id, setListOfTasks)}
       >
         delete
       </Button>
