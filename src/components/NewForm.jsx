@@ -1,3 +1,4 @@
+import { getRandomActivity } from "@/utils/getRandomActivityTask";
 import { useState } from "react";
 
 export default function NewForm({ onSubmit, setListOfObjects }) {
@@ -27,6 +28,15 @@ export default function NewForm({ onSubmit, setListOfObjects }) {
       ></input>
       <button onClick={handleSubmit} className="buttonUsg width100">
         add task
+      </button>
+      <button
+        onClick={() => {
+          getRandomActivity(setTaskNewName);
+        }}
+        type="button"
+        className="buttonUsg"
+      >
+        Random
       </button>
     </form>
   );
