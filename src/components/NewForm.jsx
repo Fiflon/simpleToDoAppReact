@@ -26,18 +26,20 @@ export default function NewForm({ onSubmit, setListOfObjects }) {
         placeholder="Add title..."
         className="inputTask"
       ></input>
-      <button onClick={handleSubmit} className="buttonUsg width100">
-        add task
-      </button>
-      <button
-        onClick={() => {
-          getRandomActivity(setTaskNewName);
-        }}
-        type="button"
-        className="buttonUsg"
-      >
-        Random
-      </button>
+      <div className="buttonSection">
+        <button onClick={handleSubmit} className="buttonUsg width50vw">
+          add task
+        </button>
+        <button
+          onClick={() => {
+            getRandomActivity(setTaskNewName);
+          }}
+          type="button"
+          className="buttonUsg width50vw"
+        >
+          Random
+        </button>
+      </div>
     </form>
   );
 }
