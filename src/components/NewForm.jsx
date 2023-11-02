@@ -25,6 +25,7 @@ export default function NewForm({ onSubmit, setListOfObjects }) {
         value={taskNewName}
         placeholder="Add title..."
         className="inputTask"
+        maxlength="100"
       ></input>
       <div className="buttonSection">
         <button onClick={handleSubmit} className="buttonUsg width50vw">
