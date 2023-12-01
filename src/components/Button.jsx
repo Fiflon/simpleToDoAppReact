@@ -1,3 +1,5 @@
+import { StyledButton } from "./styled/Button.styled";
+
 export default function Button({
   onClick = () => {},
   className = "",
@@ -5,8 +7,8 @@ export default function Button({
   ...params
 }) {
   return (
-    <button className={`${className}`} onClick={onClick} {...params}>
+    <StyledButton className={`${className}`} onClick={onClick} {...params}>
       {children}
-    </button>
+    </StyledButton>
   );
 }
